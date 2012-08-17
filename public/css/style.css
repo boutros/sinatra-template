@@ -1,0 +1,17 @@
+@import url("/css/normalize.css");
+
+
+body       { font-family: Arial; font-size: 16px; }
+div#menudiv{ position: fixed; left:0; bottom: 0; width: 100%;}
+ul.menu {padding:0; margin-top:-4px ;}
+a:link, a:visited { color: white; text-decoration: none;}
+ul.menu li { display: inline-block; width:100px; border-top: 4px solid white;
+			 font-size:14px; font-weight: bold; letter-spacing: 2px;
+			 padding:4px; float:left;}
+ul.menu li:hover { border-top: 4px solid black;}
+
+.cl1       { background-color: #333333; }
+.cl2       { background-color: #00B6FF; }
+.cl3       { background-color: #DA0046; }
+.cl4       { background-color: #FFB600; }
+.cl5       { background-color: #9FCB00; }
