@@ -14,6 +14,8 @@ class App < Sinatra::Base
     require "sinatra/reloader"
     register Sinatra::Reloader
     also_reload '*.rb'
+
+    Slim::Engine.set_default_options :pretty => true
   end
 
   get '/' do
