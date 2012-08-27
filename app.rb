@@ -1,10 +1,8 @@
 #encoding: UTF-8
 require "sinatra/base"
-require "sinatra/partial"
 require "slim"
 
 class App < Sinatra::Base
-  register Sinatra::Partial
   enable :sessions
 
   helpers do
@@ -19,18 +17,22 @@ class App < Sinatra::Base
   end
 
   get '/' do
-    slim :'index'
+    slim :'index', :locals => {:title => "App"}
   end
 
   get '/one' do
-    slim :'one'
+    slim :'one', :locals => {:title => "App: one"}
   end
 
   get '/two' do
-    slim :'two'
+    slim :'two', :locals => {:title => "App: two"}
   end
 
   get '/three' do
-    slim :'three'
+    slim :'three', :locals => {:title => "App: three"}
+  end
+
+  get '/four' do
+    slim :'four', :locals => {:title => "App: four"}
   end
 end
